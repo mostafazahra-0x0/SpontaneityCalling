@@ -60,8 +60,3 @@ Answer the call, put it on speaker, and let "Spontaneity" play a hilarious pre-r
 * **Android Studio** (Jellyfish or newer) installed on Linux.
 * **Android SDK** (API Level 34+).
 
-### Instructions
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/spontaneity-calling.git](https://github.com/your-username/spontaneity-calling.git)
