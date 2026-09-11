@@ -1,68 +1,66 @@
-# SpontaneityCalling
+# 📞 Spontaneity Is Calling
 
-A hilarious, gesture-triggered fake call app designed to gracefully save you from terrible jokes, flat punchlines, and awkward cringe moments.
+A native Android app built with **Kotlin** and **Jetpack Compose** that triggers a fake incoming call from **" العفوية "** via hardware gestures and shortcuts to gracefully save you from bad jokes.
 
 ---
 
 ## 💡 Overview
 
-Have you ever sat through a joke so dry and forced that someone immediately said: *"Spontaneity is calling you from the hospital"*?
+Have you ever sat through a joke so dry and forced that someone said: *"Spontaneity is calling you from the hospital"*?
 
-**Spontaneity Is Calling** turns that iconic joke into a real physical interaction. With a simple tap on the back of your phone or a hardware button shortcut, your phone triggers an authentic incoming call screen from **"Spontaneity"** (العفوية). 
+**Spontaneity Is Calling** turns that iconic response into a physical reality. Built natively for Android using Kotlin, the app listens for hardware gestures (like double-tapping the back of your phone) to immediately display a full-screen incoming call interface from **"Spontaneity"** (العفوية).
 
-Answer the call, put it on speaker, and let "Spontaneity" deliver a hilarious pre-recorded message calling out the terrible joke in real-time.
+Answer the call, put it on speaker, and let "Spontaneity" play a hilarious pre-recorded message in real-time.
 
 ---
 
 ## ✨ Features
 
-* 📱 **Native Incoming Call UI:** Realistic full-screen incoming call interface complete with caller avatar, ringing animation, and accept/reject controls.
-* ⚡ **Back-Tap & Hardware Shortcuts:** Trigger the call instantly via phone back-tap gestures or physical button combinations.
-* 🔊 **Satirical Audio Responses:** Answering the call plays funny pre-recorded voice clips calling out the bad joke.
-* 🎛️ **Full Customization:** Customize caller name, avatar, ringtone, vibration patterns, and custom audio recordings.
-* 🌐 **Multilingual Support:** Fully localized in English and Arabic.
+* 📱 **Jetpack Compose Call UI:** Modern, reactive full-screen incoming call screen designed to match native Android Material 3 guidelines.
+* ⚡ **Low-Latency Sensor Detection:** Uses Android's native `SensorEventListener` to catch back-tap gestures with high precision and zero bridge latency.
+* 🔄 **Foreground Service Daemon:** Runs a lightweight background service to trigger the fake call screen even when the app is closed or the screen is locked.
+* 🔊 **Native MediaPlayer Support:** High-performance playback of ringtones, haptic vibration patterns, and satirical voice notes upon answering.
+* 🎛️ **Customization & Localization:** Full control over caller avatar, contact name, custom voice recordings, and Arabic/English language support.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Framework:** React Native / Expo
-* **Motion & Sensors:** `expo-sensors` (Accelerometer gesture detection)
-* **Audio Playback:** `expo-av` / `react-native-sound`
-* **Background Processing:** Android Foreground Services / iOS Background Tasks
-* **Animations:** React Native Reanimated
+* **Language:** Kotlin
+* **UI Framework:** Jetpack Compose & Material 3
+* **Hardware Sensors:** Android `SensorManager` & `Accelerometer API`
+* **Background Processing:** Android `ForegroundService` & `WorkManager`
+* **Audio Engine:** Android `MediaPlayer` / `SoundPool`
+* **Build System:** Gradle (Kotlin DSL)
 
 ---
 
 ## 🗺️ Development Roadmap
 
-### Phase 1: UI & Core Mechanics
-- [x] Design native-looking Incoming Call Screen (iOS & Android styles).
-- [x] Implement call answer/decline interaction logic.
-- [ ] Add realistic ringtone audio playback and haptic vibration feedback.
+### Phase 1: Native Call UI (Jetpack Compose)
+- [x] Design Full-Screen Incoming Call Activity with Jetpack Compose.
+- [x] Implement Accept, Decline, and Audio playback state logic.
+- [ ] Configure System Overlay permissions (`SYSTEM_ALERT_WINDOW`) for pop-up triggers.
 
-### Phase 2: Gesture & Shortcut Triggers
-- [ ] Implement `Accelerometer` double-tap detection algorithm.
-- [ ] Map physical hardware volume button shortcuts for quick activation.
-- [ ] Request and handle Android `System Overlay` permissions (`Draw Over Other Apps`).
+### Phase 2: Sensor & Service Infrastructure
+- [ ] Implement native `SensorEventListener` algorithm for back-tap gesture recognition.
+- [ ] Build robust `ForegroundService` for persistent background detection.
+- [ ] Map physical volume hardware key shortcut receiver.
 
-### Phase 3: Background Service & Optimization
-- [ ] Configure background service daemon to process gestures while screen is locked.
-- [ ] Optimize sensor polling rate to minimize battery consumption.
-
-### Phase 4: Customization & Polish
-- [ ] Add Settings Screen to allow custom voice clip uploads and caller profile edits.
-- [ ] Final field testing across various device models.
+### Phase 3: Customization & Polish
+- [ ] Add Settings Screen to allow custom voice clip recording & caller profile edits.
+- [ ] Multi-language support (Arabic & English UI strings).
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Build & Run (Linux Environment)
 
 ### Prerequisites
 
-Ensure you have Node.js and Expo CLI installed on your machine.
+* **Android Studio** (Jellyfish or newer) installed on Linux.
+* **Android SDK** (API Level 34+).
 
-### Installation
+### Instructions
 
 1. **Clone the repository:**
    ```bash
